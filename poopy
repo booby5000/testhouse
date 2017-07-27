@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html ng-app="portal">
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7b8dc0b815","applicationID":"25505815","transactionName":"IQkMERZcXApQQRZADhASAwlLWl4CUEs=","queueTime":0,"applicationTime":65,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <script src="//cdn.optimizely.com/js/8224862843.js"></script>
+        <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-M67J9FB');</script>
+      <!-- End Google Tag Manager -->
+
+  <title>The Home of Youth Sports | Find Sport League, Camps, Clinics and more.</title>
+  <base target="_top" />
+  <link rel="stylesheet" type="text/css" href="//www.sportsengine.com/ui_themes/se/latest/main.css" />
+  <script src="/assets/application-5b07a89ae3762c41b158e4b6d58a9a60da1a01a439644858b165e7406ede796a.js"></script>
+  <script>
+    angular.module('portal')
+      .constant('sharedImagePath', '//www.sportsengine.com/ui_themes/assets/latest/images/')
+      .constant('googleApiKey', 'AIzaSyBNorFdLZ2mys8aEpYg7K-cS_ZGtou7YFo')
+  </script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="kiJsK6cR5CyuDv8NGl7QkI8+xoNtpyuK+GxFngVI2N5nkBP9GZSg64ghd2m6nscH5dKF4xkFg9jTvRrLpsrRAw==" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SportsEngine by NBC Sports is the home of youth sports. Find the perfect sport league, camp, clinic or tournament near you. From baseball, soccer and football to hockey, softball and basketball to everything in between, SportsEngine is the place to find the perfect activity for you or your child.">
+  <link rel="canonical" href="https://www.sportsengine.com" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/solutions/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/solutions/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/solutions/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/solutions/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/solutions/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/solutions/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/solutions/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/solutions/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/solutions/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/solutions/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/solutions/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="/solutions/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/solutions/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/solutions/favicon-16x16.png" sizes="16x16">
+
+</head>
+<body class="pl-site--portal">
+  <script type="text/javascript">
+  ;(function($) {
+    if (!document.getElementById('systemSpriteSVG')) {
+      var svgLoader = $('<div id="systemSpriteSVG" />').prependTo('body');
+      $.get("//www.sportsengine.com/ui_themes/assets/latest/images/system-sprite.svg", function(data) {
+        svgLoader.append(data.childNodes[0]);
+      });
+    }
+  })(jQuery);
+</script>
+
+  <div id="App">
+          <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M67J9FB"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+
+
+      <alert-panel ng-cloak key="solutions.canceled">
+        <span id="cta-solutions-text">Manage your club or league with powerful online tools from</span> <a id="cta-solutions-link" href="/solutions?lead_source=SportsEngine+Directory&utm_source=SportsEngine+Organization+Listing&utm_medium=Website+Header+Link" class="pl-link--no-break">SportsEngine Solutions<svg class="pl-icon--small"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-chevron-right"></use></svg></a>
+      </alert-panel>
+
+      <nav class="pl-ngin-bar__nav">
+        <div id="ngin-bar" class="nb-light"></div>
+      </nav>
+
+    <section class="pl-site-content">
+      
+<script>(window.nginBar=window.nginBar||{}).hideSearchBar = true</script>
+
+<div class="pl-site-section--large">
+  <div pl-grid="loose">
+    <header pl-grid-el pl-grid="1/1@phone" class="pl-heading-group">
+      <img alt="SportsEngine" src="//www.sportsengine.com/ui_themes/assets/latest/images/sportsengine-logo-color-black.svg" class="pl-site-logo" />
+      <h1 class="pl-heading--primary-lg70">Get out and play.</h1>
+      <h2 class="pl-heading--secondary-lg70">Find a sport to get involved with today!</h2>
+    </header>
+    <form pl-grid="1/1@phone" search-form cached-form="sesearch" autocomplete="off" name="searchForm" id="listings-search-form" action="/search/listings" method="get" validate-and-submit>
+  <div pl-grid="tight align-bottom">
+    <div pl-grid-el pl-grid="1/1@phone 1/4@tablet">
+      <div class="pl-field__container">
+        <label for="terms" class="pl-field__label">What sport or organization?</label>
+        <input type="text" name="terms" id="terms" class="pl-field--full" placeholder="Find sports &amp; organizations" />
+      </div>
+    </div>
+    <div pl-grid-el pl-grid="1/1@phone shrink@tablet">
+      <div class="pl-field__container">
+        <label for="code" class="pl-field__label">What zip/postal code?</label>
+        <location-field
+          ask-for-location="!$ctrl.prevSearch"
+          code-name="code"
+          code-model="$ctrl.prevSearch.code"
+          latitude-name="latitude"
+          latitude-model="$ctrl.prevSearch.latitude"
+          longitude-name="longitude"
+          longitude-model="$ctrl.prevSearch.longitude"
+          placeholder="search_form.code_placeholder">
+          <span class="pl-addon-field">
+            <svg class="pl-addon-field__icon js-code-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-location"></use></svg>
+            <input type="text" name="code" id="code" value="" placeholder="e.g. 55418" maxlength="7" size="10" class="pl-addon-field__input" />
+          </span>
+        </location-field>
+      </div>
+    </div>
+    <div pl-grid-el pl-grid="1/1@phone 1/3@tablet">
+      <div pl-grid="tighter fixed align-bottom">
+        <div pl-grid-el pl-grid="2/3@phone">
+          <div class="pl-field__container">
+            <label class="pl-field__label">Who&#39;s participating?</label>
+            <div class="pl-field-group">
+
+              <input id="gender_female" name="gender" type="radio" value="female">
+              <label for="gender_female" class="pl-button pl-field-group__item--50 pl-is-field-height" style="white-space: nowrap;">
+                <svg class="pl-icon--left hide-only@tablet"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-girl"></use></svg>
+                Girl
+              </label>
+
+              <input id="gender_male" name="gender" type="radio" value="male">
+              <label for="gender_male" class="pl-button pl-field-group__item--50 pl-is-field-height" style="white-space: nowrap;">
+                <svg class="pl-icon--left hide-only@tablet"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-boy"></use></svg>
+                Boy
+              </label>
+
+            </div>
+          </div>
+        </div>
+        <div pl-grid-el pl-grid="1/3@phone">
+          <div class="pl-field__container">
+            <label class="pl-field__label">
+              <span class="hide@desktop">Age?</span>
+              <span class="show@desktop">What Age?</span>
+            </label>
+            <input type="text" name="age" id="age" class="pl-field--full" placeholder="e.g. 10" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div pl-grid-el pl-grid="1/1@phone 1/3@tablet 1/6@desktop">
+      <button type="submit" class="pl-button--alternate pl-button--full pl-spinner-button" ng-class="{ 'pl-is-spinning': searchForm.$submitting }">
+        <spinner><svg-img class="pl-spinner--inline" use="spinner"></svg-img></spinner>
+        <span>Find Sports</span>
+      </button>
+    </div>
+  </div>
+</form>
+
+  </div>
+</div>
+<div class="pl-site-section--highlight pl-marquee">
+  <div class="pl-marquee__text">
+    <h3 class="pl-heading--secondary-lg60 pl-heading--inverse">The home of youth sports</h3>
+    <p class="pl-text">SportsEngine was created to help people simplify their sports life. Now, we&#39;re making it easier than ever for parents and athletes to find the right sport and the right organization for them.</p>
+  </div>
+  <div class="pl-marquee__image--left" style="background-image:url('//www.sportsengine.com/ui_themes/assets/latest/images/portal/welcome-image.jpg');"></div>
+</div>
+<div ng-cloak class="pl-site-section">
+  <h3 class="pl-heading--secondary-lg50">Browse by Sport</h3>
+  <carousel>
+      <a class="pl-icon-card pl-sport-card--american-football" browse-by-sport="American Football">
+        <svg-img class="pl-icon-card__icon" use="american-football"></svg-img>
+        <span class="pl-icon-card__label">Football</span>
+      </a>
+      <a class="pl-icon-card pl-sport-card--baseball" browse-by-sport="Baseball">
+        <svg-img class="pl-icon-card__icon" use="baseball"></svg-img>
+        <span class="pl-icon-card__label">Baseball</span>
+      </a>
+      <a class="pl-icon-card pl-sport-card--basketball" browse-by-sport="Basketball">
+        <svg-img class="pl-icon-card__icon" use="basketball"></svg-img>
+        <span class="pl-icon-card__label">Basketball</span>
+      </a>
+      <a class="pl-icon-card pl-sport-card--ice-hockey" browse-by-sport="Ice Hockey">
+        <svg-img class="pl-icon-card__icon" use="ice-hockey"></svg-img>
+        <span class="pl-icon-card__label">Hockey</span>
+      </a>
+      <a class="pl-icon-card pl-sport-card--lacrosse" browse-by-sport="Lacrosse">
+        <svg-img class="pl-icon-card__icon" use="lacrosse"></svg-img>
+        <span class="pl-icon-card__label">Lacrosse</span>
+      </a>
+      <a class="pl-icon-card pl-sport-card--soccer" browse-by-sport="Soccer">
+        <svg-img class="pl-icon-card__icon" use="soccer"></svg-img>
+        <span class="pl-icon-card__label">Soccer</span>
+      </a>
+      <a class="pl-icon-card pl-sport-card--volleyball" browse-by-sport="Volleyball">
+        <svg-img class="pl-icon-card__icon" use="volleyball"></svg-img>
+        <span class="pl-icon-card__label">Volleyball</span>
+      </a>
+      <a class="pl-icon-card pl-sport-card--wrestling" browse-by-sport="Wrestling">
+        <svg-img class="pl-icon-card__icon" use="wrestling"></svg-img>
+        <span class="pl-icon-card__label">Wrestling</span>
+      </a>
+  </carousel>
+</div>
+
+
+    </section>
+
+      <div class="pl-site-footer">
+  
+<nav class="pl-nav">
+  <section class="pl-nav__group show-only@phone">
+    <ul class="pl-nav__items">
+      <li class="pl-nav__item">
+        <a href="/" class="pl-nav__link">Home</a>
+      </li>
+    </ul>
+  </section>
+    <section class="pl-nav__group">
+      <h5 class="pl-nav__title">For Parents &amp; Athletes</h5>
+      <ul class="pl-nav__items">
+          <li class="pl-nav__item if-ios">
+            <a href="https://itunes.apple.com/us/app/sport-ngin/id499597400?mt=8" target="_blank" class="pl-nav__link">Download The App</a>
+          </li>
+          <li class="pl-nav__item if-android">
+            <a href="https://play.google.com/store/apps/details?id=com.sportngin.android&amp;hl=en" target="_blank" class="pl-nav__link">Download The App</a>
+          </li>
+          <li class="pl-nav__item ">
+            <a href="https://community.sportngin.com" target="_blank" class="pl-nav__link">Community</a>
+          </li>
+      </ul>
+    </section>
+    <section class="pl-nav__group">
+      <h5 class="pl-nav__title">For Sports Organizations</h5>
+      <ul class="pl-nav__items">
+          <li class="pl-nav__item ">
+            <a href="https://www.sportsengine.com/solutions?lead_source=SportsEngine+Directory&amp;utm_source=SportsEngine+Organization+Listing&amp;utm_medium=Website+Footer+Link" target="_blank" class="pl-nav__link">SportsEngine Solutions</a>
+          </li>
+          <li class="pl-nav__item ">
+            <a href="https://community.sportngin.com/snug" target="_blank" class="pl-nav__link">User Group</a>
+          </li>
+      </ul>
+    </section>
+    <section class="pl-nav__group">
+      <h5 class="pl-nav__title">SportsEngine</h5>
+      <ul class="pl-nav__items">
+          <li class="pl-nav__item ">
+            <a href="https://www.sportsengine.com/solutions/about" target="_blank" class="pl-nav__link">About Us</a>
+          </li>
+          <li class="pl-nav__item ">
+            <a href="https://www.sportsengine.com/solutions/news" target="_blank" class="pl-nav__link">News &amp; Press</a>
+          </li>
+          <li class="pl-nav__item ">
+            <a href="https://www.sportsengine.com/solutions/careers" target="_blank" class="pl-nav__link">Careers</a>
+          </li>
+      </ul>
+    </section>
+</nav>
+
+  <div>&copy;2017 <a href="https://sportsengine.com/" target="_blank" class="pl-link">SportsEngine</a>, <span class="translation_missing" title="translation missing: en.app.all_rights_reserved">All Rights Reserved</span>.</div>
+  <div>
+    <a href="http://www.sportsengine.com/solutions/legal/terms_of_use/"
+      target="_blank"
+      class="pl-link">
+      Terms of Use
+    </a>
+    <span class="pl-spacer"> / </span>
+    <a href="http://www.sportsengine.com/solutions/legal/privacy_policy/"
+      target="_blank"
+      class="pl-link">
+        Privacy Policy
+    </a>
+  </div>
+</div>
+
+      <script src="https://ngin-bar.sportsengine.com/nginbar.js"></script>
+
+  </div>
+</body>
+</html>
